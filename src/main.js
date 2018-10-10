@@ -1,12 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, HashRouter, Route } from 'react-router-dom';
-import { observable, autorun, computed } from 'mobx';
+import { observable, autorun, computed, configure } from 'mobx';
 import { Provider } from 'mobx-react';
 
 import ScreenLogin from './components/ScreenLogin.jsx';
 import ScreenHome  from './components/ScreenHome.jsx';
 import user from './stores/user.js';
+
+configure({enforceActions: 'always'});
 
 
 render(

@@ -1,4 +1,4 @@
-import { observable, autorun, computed } from 'mobx';
+import { observable, autorun, computed, action } from 'mobx';
 
 class User {
     @observable info = {username: '', password: ''};
@@ -9,6 +9,7 @@ class User {
         });
     }
 
+    @action
     setInfo(k, v) {
         this.info[k] = v;
     }
