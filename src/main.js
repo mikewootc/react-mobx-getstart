@@ -6,7 +6,7 @@ import { Provider } from 'mobx-react';
 
 import ScreenLogin from './components/ScreenLogin.jsx';
 import ScreenHome  from './components/ScreenHome.jsx';
-import user from './reducers/user.js';
+import user from './stores/user.js';
 
 
 render(
