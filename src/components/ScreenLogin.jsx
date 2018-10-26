@@ -2,6 +2,10 @@
 
 import React from 'react';
 import { inject, observer } from "mobx-react"
+import Logger from 'cpclog';
+
+
+const logger = Logger.createWrapper('ScreenLogin', Logger.LEVEL_DEBUG);
 
 @inject("user")
 @observer 
@@ -11,7 +15,7 @@ class ScreenLogin extends React.Component {
     }
 
     componentDidMount() {
-        console.log('props:', this.props);
+        logger.debug('props:', this.props);
     }
 
     handleUsernameChange(event) {

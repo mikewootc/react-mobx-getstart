@@ -1,6 +1,10 @@
 import { observable, autorun, computed, action } from 'mobx';
+import Logger from 'cpclog';
 
-class User {
+
+const logger = Logger.createWrapper('UserStore', Logger.LEVEL_DEBUG);
+
+export default class UserStore {
     @observable info = {username: '', password: ''};
 
     constructor() {
@@ -14,7 +18,4 @@ class User {
         this.info[k] = v;
     }
 }
-
-const user = new User();
-export default user;
 
